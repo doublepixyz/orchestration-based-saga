@@ -1,4 +1,3 @@
-# orchestration-based-saga
 # CQRS demo with Spring Boot, Spring Cloud Stream, Kafka, Redis, Mysql
 by Zhigang Pi
 

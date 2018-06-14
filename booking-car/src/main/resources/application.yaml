@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: kafka:9092
+      bindings:
+        booked-car-in:
+          destination: bookingCar
+          contentType: application/json
+        compensation-car-in:
+          destination: compensatingCar
+          contentType: application/json
+  datasource:  
+    url : jdbc:mariadb://mariadb-docker-container:3306/demo?useSSL=false
+    driver-class-name: org.mariadb.jdbc.Driver
+    username : demo  
+    password : Demo@1234  
+  jpa:  
+    show-sql : true  
+    hibernate:  
+      ddl-auto : update  
+    properties:  
+      hibernate:  
+        dialect : org.hibernate.dialect.MySQL5InnoDBDialect
